@@ -1,0 +1,579 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: rgb(0, 0,33);
+    color: white;
+    font-family: 'poppins',sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px; 
+    background-color:rgb(18, 18, 62);
+
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+
+}
+nav ul li{
+    list-style: none;
+    margin: 0 23px;
+}
+nav ul li a{
+   text-decoration: none;
+   color: white;
+}
+nav ul li a:hover{
+   color:lavender;
+}
+main hr{
+    border: 0;
+    background: #9c97f1;
+    height: 1.2px;
+    margin: 60px 84px;
+}
+.left{
+    font-size: 1.5rem;
+}
+.firstsec{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:120px 0;
+}
+.firstsec >div{
+    width: 35%;
+   
+}
+.leftsec{
+    font-size:2rem ;
+   
+}
+.leftsec .buttons{
+    padding:50px 0;
+}
+.leftsec .btn{
+    padding: 12px;
+    background: #1e2167;
+    color: white;
+    border: 2px solid white;
+    border-radius:6px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.rightsec img{
+    width: 80%;
+    
+}
+.purple{
+    color: rgb(136, 59, 209);
+}
+.text-gray{
+    color: grey;
+}
+#element{
+     color: rgb(136, 59, 209);
+}
+.secondsec{
+    max-width: 80vw;
+    margin: auto;
+    height: 80vh;
+}
+.secondsec h1{
+    font-size: 1.9rem;
+}
+.secondsec .box{
+    background: white;
+    width: 77vw;
+    height: 2px;
+    margin: 56px 0; 
+    display: flex;
+}
+.secondsec .vert{
+    height: 93px;
+    width: 1px;
+    background-color:white;
+    margin: 0 6vw;
+}
+.image-top{
+    width: 23px;
+    position: relative;
+    top: -32px;
+    left: -9px;
+
+}
+.vert-text{
+    position: relative;
+    top: 75px;
+    width: 150px;
+    font-size: 14px;
+}
+.vert-desc{
+     position: relative;
+     color: gray;
+     top: 86px;
+     width: 150px;
+     font-size: 9px;
+}
+footer{
+    background-color: #0e0e1a;
+}
+.foot{
+    display: flex;
+    padding: 23px 122px;
+    justify-content: space-evenly;
+}
+.foot ul{
+    list-style: none;
+
+
+}
+.foot ul a{
+    text-decoration: none;
+    color: white;
+}
+.foot>div{
+    width: 223px;
+}
+footer .foot-rights{
+    text-align: center;
+    color: gray;
+    padding: 12px 0;
+}
+
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: calc(100vh - 200px);
+}
+
+.about-section {
+    padding: 20px 0;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(136, 59, 209, 0.3);
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h2 {
+    color: rgb(136, 59, 209);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.about-text p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+.skills-section, .personal-info {
+    margin-top: 30px;
+}
+
+.skills-section h3, .personal-info h3 {
+    color: rgb(136, 59, 209);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.skill-item {
+    background: rgba(136, 59, 209, 0.1);
+    border: 1px solid rgba(136, 59, 209, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-2px);
+    background: rgba(136, 59, 209, 0.2);
+}
+
+.skill-name {
+    font-weight: 500;
+    color: white;
+}
+
+.projects-section {
+    padding: 20px 0;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.projects-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: rgba(30, 33, 103, 0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(136, 59, 209, 0.2);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(136, 59, 209, 0.4);
+    border-color: rgba(136, 59, 209, 0.5);
+}
+
+.project-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    color: rgb(136, 59, 209);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: rgba(136, 59, 209, 0.2);
+    color: rgb(136, 59, 209);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(136, 59, 209, 0.3);
+}
+
+.contact-section {
+    padding: 20px 0;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.contact-info h2, .contact-form h2 {
+    color: rgb(136, 59, 209);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: rgba(30, 33, 103, 0.5);
+    border-radius: 10px;
+    border-left: 4px solid rgb(136, 59, 209);
+}
+
+.contact-item h3 {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.contact-item p {
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-link {
+    background: rgba(136, 59, 209, 0.2);
+    color: rgb(136, 59, 209);
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid rgba(136, 59, 209, 0.3);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: rgba(136, 59, 209, 0.3);
+    transform: translateY(-2px);
+}
+
+.contact-form {
+    background: rgba(30, 33, 103, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(136, 59, 209, 0.2);
+    border-left: 4px solid rgb(136, 59, 209);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgb(136, 59, 209);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 0, 33, 0.8);
+    border: 1px solid rgba(136, 59, 209, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: rgb(136, 59, 209);
+    box-shadow: 0 0 10px rgba(136, 59, 209, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    width: 50%;
+    height: 50px;
+    position: relative;
+    left: 34px;
+    background: linear-gradient(45deg, rgb(136, 59, 209), rgb(100, 40, 170));
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, rgb(150, 80, 220), rgb(120, 60, 190));
+}
+
+/* Click effect */
+.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsive Styles for Mobile */
+@media screen and (max-width:800px){
+     * {
+  box-sizing: border-box;
+}
+   nav{
+    flex-direction: column;
+    justify-content: center;
+   }
+   .secondsec .vert{
+    height:215px;
+   }
+   .vert-text,.vert-desc{
+    left: 45px;
+   }
+   .vert-desc{
+    width: 300px;
+   }
+   .firstsec{
+    flex-direction: column-reverse;
+   }
+   .box{
+    flex-direction: column;
+   }
+   .secondsec .box{
+    width: 50vw;
+   }
+   .leftsec{
+    width: 100% !important;
+    display: flex;
+    flex-direction:column; 
+    justify-content: center;
+    align-items: center;
+   }
+   .secondsec{
+    max-width: 80vw;
+    margin: auto;
+    height: 141vh;
+   }
+   .rightsec{
+    width: 721px !important;
+    display: flex;
+    justify-content: center;
+   }
+   .rightsec img{
+    width: 45vw;
+    margin-bottom: 73px ;
+   }
+   .secondsec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   .image-top{
+    top: 118px;
+   }
+   body{
+    min-width: fit-content;
+   }
+   footer{
+    width: 100%;
+    flex-direction: column; /* Stacks sections vertically */
+    align-items: center;
+   }
+   .foot{
+    min-width: 100%; /* Makes each section take full width */
+    text-align: center;
+    margin: 15px 0;
+   }
+   /* About Page Mobile Styles */
+   .about-content {
+    flex-direction: column;
+    gap: 30px;
+   }
+   
+   .about-image img {
+    max-width: 250px;
+   }
+   
+   .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+   }
+   
+   /* Projects Page Mobile Styles */
+   .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+   }
+   
+   .project-card {
+    margin: 0 10px;
+   }
+   
+   /* Contact Page Mobile Styles */
+   .contact-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+   }
+   
+   .social-links {
+    flex-wrap: wrap;
+   }
+   
+   .page-container {
+    padding: 20px 15px;
+   }
+   
+}
