@@ -1,68 +1,104 @@
 import React from "react";
-import '../styles.css';
+import "../styles.css";
+import { portfolioData } from "../data/portfolioData";
 
 const ContactMe = () => {
-    return (
-        <>
-            <main className="page-container">
-                <section className="contact-section">
-                    <div className="contact-header">
-                        <h1>Get In <span className="purple">Touch</span></h1>
-                        <p className="text-gray">Let's work together on your next project</p>
-                    </div>
+  const profileHighlights = [
+    "Backend systems",
+    "Problem solving",
+    "Full-stack projects",
+  ];
 
-                    <div className="contact-content">
-                        <div className="contact-info">
-                            <h2>Contact Information</h2>
-                            <div className="contact-item">
-                                <h3>📧 Email</h3>
-                                <p>Manijitya30@gmail.com</p>
-                            </div>
-                            <div className="contact-item">
-                                <h3>📱 Phone</h3>
-                                <p>+91 12345 67890</p>
-                            </div>
-                            <div className="contact-item">
-                                <h3>📍 Location</h3>
-                                <p>India</p>
-                            </div>
-                            <div className="contact-item">
-                                <h3>🔗 Social Links</h3>
-                                <div className="social-links">
-                                    <a href="https://github.com/manijitya" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
-                                    <a href="https://linkedin.com/in/manijitya" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
-                                    <a href="https://twitter.com/manijitya" target="_blank" rel="noopener noreferrer" className="social-link">Twitter</a>
-                                </div>
-                            </div>
-                        </div>
+  return (
+    <main className="page-shell">
+      <section className="section-heading contact-heading">
+        <p className="section-label">Contact</p>
+        <h1>Let&apos;s build something useful.</h1>
+        <p className="section-copy">
+          Reach out for internships, collaborations, student opportunities, or full-stack development discussions.
+        </p>
+      </section>
 
-                        <div className="contact-form">
-                            <h2>Send Me a Message</h2>
-                            <form action="https://formspree.io/f/mzzvwdjo" method="post">
-                                <div className="form-group">
-                                    <label htmlFor="name">Name</label>
-                                    <input type="text" id="name" name="name" required />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="email">Email</label>
-                                    <input type="email" id="email" name="email" required />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="subject">Subject</label>
-                                    <input type="text" id="subject" name="subject" required />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="message">Message</label>
-                                    <textarea id="message" name="message" rows="5" required></textarea>
-                                </div>
-                                <button type="submit" className="btn submit-btn">Send Message</button>
-                            </form>
-                        </div>
-                    </div>
-                </section>
-            </main>
-        </>
-    );
+      <section className="contact-layout">
+        <article className="contact-panel card-surface contact-intro-panel">
+          <div className="contact-panel-top">
+            <p className="section-label">Open To</p>
+            <h2>Conversations around backend engineering, product ideas, and internships.</h2>
+            <p className="contact-lead">
+              I enjoy working on practical systems, thoughtful APIs, and products that solve real problems. If you have an opportunity or idea worth building, I&apos;d love to hear about it.
+            </p>
+          </div>
+
+          <div className="contact-highlight-row">
+            {profileHighlights.map((item) => (
+              <span key={item} className="contact-highlight-chip">
+                {item}
+              </span>
+            ))}
+          </div>
+
+          <div className="contact-card-grid">
+            <div className="contact-detail-card">
+              <span>Email</span>
+              <a href={`mailto:${portfolioData.email}`}>{portfolioData.email}</a>
+            </div>
+            <div className="contact-detail-card">
+              <span>Phone</span>
+              <a href={`tel:${portfolioData.phone.replace(/\s+/g, "")}`}>{portfolioData.phone}</a>
+            </div>
+            <div className="contact-detail-card">
+              <span>Location</span>
+              <p>{portfolioData.location}</p>
+            </div>
+          </div>
+
+          <div className="contact-social-block">
+            <p className="section-label">Find Me Online</p>
+            <div className="social-links contact-social-links">
+              {portfolioData.socialLinks.map((link) => (
+                <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="social-link">
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </article>
+
+        <article className="contact-panel card-surface contact-form-panel">
+          <div className="contact-form-header">
+            <p className="section-label">Message Form</p>
+            <h2>Send a Message</h2>
+            <p className="contact-form-copy">
+              Share the role, project, or idea you have in mind. I&apos;ll get back as soon as I can.
+            </p>
+          </div>
+          <form action="https://formspree.io/f/mzzvwdjo" method="post" className="contact-form">
+            <div className="contact-form-grid">
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Internship, project, collaboration..." required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me a little about what you'd like to discuss." required></textarea>
+            </div>
+            <button type="submit" className="primary-btn submit-btn">
+              Send Message
+            </button>
+          </form>
+        </article>
+      </section>
+    </main>
+  );
 };
 
 export default ContactMe;
